@@ -1,172 +1,36 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
-
+//Current day HTML line 20
 var today = dayjs();
 
 $('#currentDay').text(today.format('dddd, D MMMM YYYY'))
 
+// Current time (hour)
 var currentTime = today.format('H')
-console.log(currentTime)
-
-var yesterday = dayjs().isBefore(dayjs(currentTime))
-console.log(yesterday)
-
-var equal = dayjs().isSame(dayjs(currentTime))
-console.log(equal)
-
-var incoming = dayjs().isAfter(dayjs(currentTime))
-console.log(incoming)
+console.log('current hour is ' + currentTime)
 
 
+// variable for text-input
+var input9 = document.getElementById('9AM') // HTML line 36
+var input10 = document.getElementById('10AM')  // HTML line 45
+var input11 = document.getElementById('11AM')  // HTML line 54
+var input12 = document.getElementById('12PM')  // HTML line 61
+var input1 = document.getElementById('1PM')  // HTML line 68
+var input2 = document.getElementById('2PM')  // HTML line 75
+var input3 = document.getElementById('3PM')  // HTML line 82
+var input4 = document.getElementById('4PM') // HTML line 89
+var input5 = document.getElementById('5PM') // HTML line 96
 
-$(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-});
+// variable for saveBtn
+var saveBtn9 = document.getElementById('save-Btn9') // HTML line 37
+var saveBtn10 = document.getElementById('save-Btn10') // HTML line 46
+var saveBtn11 = document.getElementById('save-Btn11') // HTML line 55
+var saveBtn12 = document.getElementById('save-Btn12') // HTML line 62
+var saveBtn1 = document.getElementById('save-Btn1') // HTML line 69
+var saveBtn2 = document.getElementById('save-Btn2') // HTML line 76
+var saveBtn3 = document.getElementById('save-Btn3') // HTML line 83
+var saveBtn4 = document.getElementById('save-Btn4') // HTML line 90
+var saveBtn5 = document.getElementById('save-Btn5') // HTML line 97
 
-var input9 = document.getElementById('9AM')
-var input10 = document.getElementById('10AM')
-var input11 = document.getElementById('11AM')
-var input12 = document.getElementById('12PM')
-var input1 = document.getElementById('1PM')
-var input2 = document.getElementById('2PM')
-var input3 = document.getElementById('3PM')
-var input4 = document.getElementById('4PM')
-var input5 = document.getElementById('5PM')
-
-
-var saveBtn9 = document.getElementById('save-Btn9')
-var saveBtn10 = document.getElementById('save-Btn10')
-var saveBtn11 = document.getElementById('save-Btn11')
-var saveBtn12 = document.getElementById('save-Btn12')
-var saveBtn1 = document.getElementById('save-Btn1')
-var saveBtn2 = document.getElementById('save-Btn2')
-var saveBtn3 = document.getElementById('save-Btn3')
-var saveBtn4 = document.getElementById('save-Btn4')
-var saveBtn5 = document.getElementById('save-Btn5')
-
-
-saveBtn9.onclick = function () {
-  var userSchedule = input9.value;
-  localStorage.setItem('9AM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input9.innerHTML = localStorage.getItem('9AM')
-})
-
-saveBtn10.onclick = function () {
-  var userSchedule = input10.value;
-  localStorage.setItem('10AM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input10.innerHTML = localStorage.getItem('10AM')
-})
-
-saveBtn11.onclick = function () {
-  var userSchedule = input11.value;
-  localStorage.setItem('11AM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input11.innerHTML = localStorage.getItem('11AM')
-})
-
-saveBtn12.onclick = function () {
-  var userSchedule = input12.value;
-  localStorage.setItem('12PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input12.innerHTML = localStorage.getItem('12PM')
-})
-
-saveBtn1.onclick = function () {
-  var userSchedule = input1.value;
-  localStorage.setItem('1PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input1.innerHTML = localStorage.getItem('1PM')
-})
-
-saveBtn2.onclick = function () {
-  var userSchedule = input2.value;
-  localStorage.setItem('2PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input2.innerHTML = localStorage.getItem('2PM')
-})
-
-saveBtn3.onclick = function () {
-  var userSchedule = input3.value;
-  localStorage.setItem('3PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input3.innerHTML = localStorage.getItem('3PM')
-})
-
-saveBtn4.onclick = function () {
-  var userSchedule = input4.value;
-  localStorage.setItem('4PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input4.innerHTML = localStorage.getItem('4PM')
-})
-
-saveBtn5.onclick = function () {
-  var userSchedule = input5.value;
-  localStorage.setItem('5PM', userSchedule)
-}
-window.addEventListener('load', function () {
-  input5.innerHTML = localStorage.getItem('5PM')
-})
-
-// var hours = dayjs().set('hour', 9).format('hA');
-// console.log(hours)
-
-
-// var hour = document.querySelectorAll('.hour')
-// console.log(hour)
-
-
-// var hour9AM = hour[0].textContent = dayjs().set('hour', 9).format('hA');
-// console.log(hour[0].textContent)
-// var hour10AM = hour[1].textContent = dayjs().set('hour', 10).format('hA');
-// var hour11AM = hour[2].textContent = dayjs().set('hour', 11).format('hA');
-// var hour12PM = hour[3].textContent = dayjs().set('hour', 12).format('hA');
-// var hour1PM = hour[4].textContent = dayjs().set('hour', 13).format('hA');
-// var hour2PM = hour[5].textContent = dayjs().set('hour', 14).format('hA');
-// var hour3PM = hour[6].textContent = dayjs().set('hour', 15).format('hA');
-// var hour4PM = hour[7].textContent = dayjs().set('hour', 16).format('hA');
-// var hour5PM = hour[8].textContent = dayjs().set('hour', 17).format('hA');
-// console.log(hour5PM)
-
-
-// var hours = [hour9AM, hour10AM, hour11AM, hour12PM, hour1PM, hour2PM, hour3PM, hour4PM, hour5PM]
-// console.log(hours)
-
-
-
-
-
-// if (currentTime == hour10AM) {
-//   $('#4PM').css("background-color", "yellow")
-// }
 
 let hour9 = document.getElementById('hour-9') // 9AM
 let hour10 = document.getElementById('hour-10') //10AM
@@ -188,12 +52,82 @@ hour15 = 15
 hour16 = 16
 hour17 = 17
 
+//click function for local Storage//
+saveBtn9.onclick = function () {
+  var userInput = input9.value;
+  localStorage.setItem('9AM', userInput)
+}
+window.addEventListener('load', function () {
+  input9.innerHTML = localStorage.getItem('9AM')
+})
 
-console.log(currentTime)
+saveBtn10.onclick = function () {
+  var userInput = input10.value;
+  localStorage.setItem('10AM', userInput)
+}
+window.addEventListener('load', function () {
+  input10.innerHTML = localStorage.getItem('10AM')
+})
 
-console.log(hour9)
+saveBtn11.onclick = function () {
+  var userInput = input11.value;
+  localStorage.setItem('11AM', userInput)
+}
+window.addEventListener('load', function () {
+  input11.innerHTML = localStorage.getItem('11AM')
+})
 
-//color-coded for time block accroding to past,present and future.
+saveBtn12.onclick = function () {
+  var userInput = input12.value;
+  localStorage.setItem('12PM', userInput)
+}
+window.addEventListener('load', function () {
+  input12.innerHTML = localStorage.getItem('12PM')
+})
+
+saveBtn1.onclick = function () {
+  var userInput = input1.value;
+  localStorage.setItem('1PM', userInput)
+}
+window.addEventListener('load', function () {
+  input1.innerHTML = localStorage.getItem('1PM')
+})
+
+saveBtn2.onclick = function () {
+  var userInput = input2.value;
+  localStorage.setItem('2PM', userInput)
+}
+window.addEventListener('load', function () {
+  input2.innerHTML = localStorage.getItem('2PM')
+})
+
+saveBtn3.onclick = function () {
+  var userInput = input3.value;
+  localStorage.setItem('3PM', userInput)
+}
+window.addEventListener('load', function () {
+  input3.innerHTML = localStorage.getItem('3PM')
+})
+
+saveBtn4.onclick = function () {
+  var userInput = input4.value;
+  localStorage.setItem('4PM', userInput)
+}
+window.addEventListener('load', function () {
+  input4.innerHTML = localStorage.getItem('4PM')
+})
+
+saveBtn5.onclick = function () {
+  var userInput = input5.value;
+  localStorage.setItem('5PM', userInput)
+}
+window.addEventListener('load', function () {
+  input5.innerHTML = localStorage.getItem('5PM')
+})
+
+// console.log(hour9)
+
+//color-coded for time block accroding to past,present and future//
 if (currentTime == hour9) {
   $('#9AM').css("background-color", "red")
 } else if (currentTime > hour9) {
