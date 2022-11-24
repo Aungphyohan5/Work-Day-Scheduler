@@ -14,6 +14,15 @@ textarea {
 }
 
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  color: red;
+}
+
 /* Class and ID Styling */
 .description {
   white-space: pre-wrap;
@@ -59,4 +68,10 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+#message {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }

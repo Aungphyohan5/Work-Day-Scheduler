@@ -56,6 +56,7 @@ hour17 = 17
 saveBtn9.onclick = function () {
   var userInput = input9.value;
   localStorage.setItem('9AM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input9.innerHTML = localStorage.getItem('9AM')
@@ -64,6 +65,7 @@ window.addEventListener('load', function () {
 saveBtn10.onclick = function () {
   var userInput = input10.value;
   localStorage.setItem('10AM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input10.innerHTML = localStorage.getItem('10AM')
@@ -72,6 +74,7 @@ window.addEventListener('load', function () {
 saveBtn11.onclick = function () {
   var userInput = input11.value;
   localStorage.setItem('11AM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input11.innerHTML = localStorage.getItem('11AM')
@@ -80,6 +83,7 @@ window.addEventListener('load', function () {
 saveBtn12.onclick = function () {
   var userInput = input12.value;
   localStorage.setItem('12PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input12.innerHTML = localStorage.getItem('12PM')
@@ -88,6 +92,7 @@ window.addEventListener('load', function () {
 saveBtn1.onclick = function () {
   var userInput = input1.value;
   localStorage.setItem('1PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input1.innerHTML = localStorage.getItem('1PM')
@@ -96,6 +101,7 @@ window.addEventListener('load', function () {
 saveBtn2.onclick = function () {
   var userInput = input2.value;
   localStorage.setItem('2PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input2.innerHTML = localStorage.getItem('2PM')
@@ -104,6 +110,7 @@ window.addEventListener('load', function () {
 saveBtn3.onclick = function () {
   var userInput = input3.value;
   localStorage.setItem('3PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input3.innerHTML = localStorage.getItem('3PM')
@@ -112,6 +119,7 @@ window.addEventListener('load', function () {
 saveBtn4.onclick = function () {
   var userInput = input4.value;
   localStorage.setItem('4PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input4.innerHTML = localStorage.getItem('4PM')
@@ -120,6 +128,7 @@ window.addEventListener('load', function () {
 saveBtn5.onclick = function () {
   var userInput = input5.value;
   localStorage.setItem('5PM', userInput)
+  $('#message').append('<p>Appointment added to <span>local Storage ✔️</span></p>')
 }
 window.addEventListener('load', function () {
   input5.innerHTML = localStorage.getItem('5PM')
